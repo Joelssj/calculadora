@@ -1,0 +1,197 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #534f4f;
+}
+
+.numbers {
+    user-select: none;
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 1.5em;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5em;
+}
+
+
+.input {
+    border-radius: 10px;
+    height: 100px;
+    padding-right: 15px;
+    padding-top: 10px;
+    text-align: right;
+    font-size: 2.5rem;
+    overflow-x: auto;
+    transition: all .2s ease-in-out;
+    background-color: #ddd;  
+    box-shadow: inset 2px 2px 2px #aaa,
+              inset -2px -2px 2px #fff;
+}
+
+
+.buttonPair {
+    display: flex;
+    column-gap: 1.5em;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5em;
+    height: 5em;
+    background-color: #333;
+    border-radius: 5px;
+}
+
+.button,
+.buttonOperator,
+.buttonDelete {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5.7em;
+    height: 5.7em;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-family: Montserrat;
+    transition: 0.1s ease-in-out;
+}
+
+.button {
+    background-color: #eee;
+    box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 2px,
+        #fff 1px 1px 1px inset, #ddd -1px -1px 2px inset;
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 4em;
+}
+
+.calculadora {
+    width: 393px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    padding: 1.5rem;
+    background-color: #534f4f;
+    border-radius: 3px;
+}
+
+.buttonOperator {
+    background-color: #444;
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 2px,
+        #888 1px 1px 1px inset, #444 -1px -1px 2px inset;
+}
+
+.buttonDelete {
+    background-color: #d00;
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 2px, #f77 1px 1px 1px inset,
+        #d00 -1px -1px 2px inset;
+}
+
+.buttonText {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #555;
+}
+
+.buttonTextOperator {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #fff;
+}
+
+.buttonTextDelete {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #fff;
+}
+
+.button:active {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 0px,
+        inset 0.5px 0.5px 2px #000,
+        #ddd -3px -3px 6px 0px inset;
+}
+
+.button:active .buttonText {
+    transform: scale(0.95);
+}
+
+.buttonOperator:active {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 0px,
+        inset 0.5px 0.5px 2px #000,
+        #444 -3px -3px 6px 0px inset;
+}
+
+.buttonOperator:active .buttonText {
+    transform: translateY(0.5px);
+}
+
+.buttonDelete:active {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 0px,
+        inset 0.5px 0.5px 2px #000,
+        #d00 -3px -3px 6px 0px inset;
+}
+
+.buttonDelete:active .button_text {
+    transform: translateY(0.5px);
+}
+
+.analizadorLexico {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5em;
+    padding: 3rem;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    min-width: 450px;
+    height: 580px;
+    overflow: auto;
+}
+
+.textAnalizadorLexico {
+    font-weight: 700;
+    color: #333;
+}
+
+.containerTextLexico {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: start;
+    gap: 0.5em;
+}
+
+.arbolSintactico {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5em;
+    padding: 3rem;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    min-width: 450px;
+}
+
+.containerTextArbol {
+    width: 600px;
+    height: 500px;
+}
